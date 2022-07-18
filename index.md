@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 # Welcome to Tracer's Site！
 ----
 The paper "Tracking Patches for Open Source Software Vulnerabilities" has been submitted to ESEC/FSE 2022. This page lists the supplementary materials that are omitted from the paper due to space limitations, (i.e., hidden patches in NVD, dataset, accuracy, sensitivity, and application analysis), and releases the experimental data.
@@ -62,7 +66,7 @@ It is worth mentioning that we do not include patch quality evaluation of NVD in
 
 We analyzed the overlap between the patches identified by Tracer (denoted as $P_{Tracer}$) and our manually identified patches (denoted as $P_{GT}$ ) for each CVE in our depth dataset. In particular, we classify overlap relationships into six categories, which are used as another indicator of patch accuracy. The result is reported in Table 1, where the first column lists the six categories, the second column shows the number of CVEs belonging to each category, and the last column gives the total number of patches found by Tracer. 
 
-<img src="./images/accuracy analysis.png" alt="Our Depth Dataset w.r.t. Programming Languages" style="zoom:50%;" />
+<img src="./images/accuracy analysis.png" alt="Our Depth Dataset w.r.t. Programming Languages" style="zoom:100%;" />
 
 It can be observed that Tracer can find patches accurately and completely for 773 (59.7%) CVEs (i.e., $P_{Tracer} = P_{GT}$), with an average of 1.9 found patches for each CVE. Tracer can find patches completely but include some false positives for 128 (9.9%) CVEs (i.e., $P_{Tracer} ⊃ P_{GT}$). In that sense, 901 (69.6%) CVEs’ patches are completely found by Tracer. Besides, Tracer can find patches accurately but have some false negatives for 139 (10.7%) CVEs (i.e., $P_{Tracer} ⊂ P_{GT}$). Tracer incurs both false positives and false negatives for 27 (2.1%) CVEs (i.e., $P_{Tracer} ∩ P_{GT} \not= ∅$), while the patches found for 73 (5.6%) CVEs by Tracer are all false positives (i.e., $P_{Tracer} ∩ P_{GT} = ∅$). Notice that we analyze the reasons for false positives and false negatives in the submitted paper. These results demonstrate the capability of Tracer in finding patches accurately and completely.
 
